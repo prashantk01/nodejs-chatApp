@@ -1,0 +1,31 @@
+{
+  "name": "nodejs-chatapp",
+  "version": "1.0.0",
+  "description": "* A web based chat application where people can connect with each other. * Users can create Unique rooms and share it people to have private converstions. * Fuctionality to check if users are typing and current online users. * Tools used JavaScript, NodeJs, Web Sockets, HTML, CSS.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prashantk01/nodejs-chatApp.git"
+  },
+  "author": "Prashant Kumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/prashantk01/nodejs-chatApp/issues"
+  },
+  "homepage": "https://github.com/prashantk01/nodejs-chatApp#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "dotenv": "^16.0.0",
+    "ejs": "^3.1.7",
+    "express": "^4.18.0",
+    "http": "0.0.1-security",
+    "jquery": "^3.6.0",
+    "jsdom": "^19.0.0",
+    "mongoose": "^6.3.1",
+    "socket.io": "^4.5.0",
+    "winston": "^3.7.2"
+  }
+}
