@@ -1,7 +1,7 @@
-const mongoose = require("mongoose");
-const MessageModel = require("../../models/schema/messages.schema/message.schema.js");
-module.exports=class MessageDAO {
-  async getAllMessages() {
+import mongoose from "mongoose";
+import MessageModel from "../../models/schema/messages.schema/message.schema.js";
+
+  export default async function getAllMessagesDAO() {
     let messages;
     try {
       facilities = await MessageModel.find({});
@@ -14,7 +14,7 @@ module.exports=class MessageDAO {
     return messages;
   }
 
-  async createMessge(message){
+  export  async function createMessageDAO(message){
     let messageCreated = await new MessageModel(message);
     messageCreated.save((err) =>{
     if(err)
@@ -24,4 +24,3 @@ module.exports=class MessageDAO {
     console.log("createdMessage: ",messageCreated);
     return messageCreated;
   }
-}

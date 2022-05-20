@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 mongoose.Schema.Types.String.set("trim", true);
 
 const messageSchema = new mongoose.Schema({
@@ -21,7 +21,7 @@ messageSchema.set("toJSON", {
   },
 });
 
-const MessageModel =
-  mongoose.model("Message", messageSchema);
-
-module.exports = MessageModel
+ const MessageModel =
+   mongoose.model("Message", messageSchema);
+  
+export default MessageModel;

@@ -1,6 +1,7 @@
-const express = require('express');
+// const express = require('express');
+import  express from 'express';
 const router = express.Router();
-const MessageService = require("../../services/messages.services/message.service.js");
+const MessageService = require("../../services/messages.services/messageService.js");
 const messageService = new MessageService();
 
 router.get(

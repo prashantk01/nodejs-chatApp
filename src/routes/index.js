@@ -1,6 +1,7 @@
-const express = require('express');
+import { createRequire } from "module";
+const require = createRequire(import.meta.url);
+import express from "express";
 const router = express.Router();
-
 // TESTING ENDPOINT
 router.get("/test", (req, res) =>
   res.render('test')

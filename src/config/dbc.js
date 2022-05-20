@@ -1,5 +1,5 @@
-const mongoose = require("mongoose");
-const dotenv = require('dotenv');
+import mongoose from "mongoose"
+import dotenv from "dotenv";
 dotenv.config();
 
 
@@ -8,7 +8,7 @@ const MONGODB_URI =process.env.MONGODB_URI || "";
 
 let db;
 
-function connectDB() {
+export default function connectDB() {
   // DATABASE CONNECTION
   mongoose.connect(MONGODB_URI, {
     useNewUrlParser: true,
@@ -24,5 +24,3 @@ function connectDB() {
    console.log("databse connected");
   });
 }
-
-module.exports = { connectDB };
