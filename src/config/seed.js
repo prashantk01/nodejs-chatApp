@@ -1,5 +1,5 @@
 // import { createMessage } from "../services/messages.services/messageService.js";
-const createMessage = require("../services/messages.services/messageService.js")
+const messageService = require("../services/messages.services/messageService.js")
 
 // SEED DB
 const seedDB = function () {
@@ -16,7 +16,7 @@ const seedDB = function () {
         ]
        
         for (let i = 0; i < messages.length; i += 1) {
-            createMessage(messages[i]);
+            messageService.createMessage(messages[i]);
         }
 };
 

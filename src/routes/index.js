@@ -1,6 +1,7 @@
-import { createRequire } from "module";
-const require = createRequire(import.meta.url);
-import express from "express";
+// import { createRequire } from "module";
+// const require = createRequire(import.meta.url);
+// import express from "express";
+const express = require('express');
 const router = express.Router();
 // TESTING ENDPOINT
 router.get("/test", (req, res) =>
