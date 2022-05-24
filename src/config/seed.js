@@ -1,7 +1,8 @@
-import { createMessage } from "../services/messages.services/messageService.js";
+// import { createMessage } from "../services/messages.services/messageService.js";
+const createMessage = require("../services/messages.services/messageService.js")
 
 // SEED DB
-export default function seedDB() {
+const seedDB = function () {
     
         let messages = [
             {
@@ -18,3 +19,5 @@ export default function seedDB() {
             createMessage(messages[i]);
         }
 };
+
+module.exports = seedDB;

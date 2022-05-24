@@ -1,20 +1,26 @@
-import express from "express"
-import bodyParser from "body-parser";
-import connectDB from "./src/config/dbc.js"
-import seedDB from "./src/config/seed.js"
-import jsdom from "jsdom";
-import { createRequire } from "module";
-const require = createRequire(import.meta.url);
+// import express from "express"
+const express = require('express')
+// import bodyParser from "body-parser";
+const bodyParser =require('body-parser')
+// import connectDB from "./src/config/dbc.js"
+const connectDB = require('./src/config/dbc.js')
+// import seedDB from "./src/config/seed.js"
+const seedDB = require('./src/config/seed.js')
+// import jsdom from "jsdom";
+const jsdom = require('jsdom')
+// import { createRequire } from "module";
+// const require = createRequire(import.meta.url);
 
 const { JSDOM } = jsdom;
 const { window } = new JSDOM();
 const { document } = (new JSDOM('')).window;
 global.document = document;
-// var $ = require("jquery")(window);
-import $ from "jquery";
+var $ = require("jquery")(window);
+// import $ from "jquery";
 
 // DOTENV CONFIG CONNECTION
-import dotenv from "dotenv";
+// import dotenv from "dotenv";
+const dotenv = require('dotenv')
 dotenv.config();
 
 

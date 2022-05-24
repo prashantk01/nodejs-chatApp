@@ -1,7 +1,9 @@
-import mongoose from "mongoose";
-import MessageModel from "../../models/schema/messages.schema/message.schema.js";
+// import mongoose from "mongoose";
+const mongoose = require("mongoose")
+// import MessageModel from "../../models/schema/messages.schema/message.schema.js";
+const MessageModel = require("../../models/schema/messages.schema/message.schema.js");
 
-  export default async function getAllMessagesDAO() {
+  const getAllMessagesDAO=async function () {
     let messages;
     try {
       facilities = await MessageModel.find({});
@@ -14,7 +16,7 @@ import MessageModel from "../../models/schema/messages.schema/message.schema.js"
     return messages;
   }
 
-  export  async function createMessageDAO(message){
+  const createMessageDAO=  async function (message){
     let messageCreated = await new MessageModel(message);
     messageCreated.save((err) =>{
     if(err)
@@ -24,3 +26,5 @@ import MessageModel from "../../models/schema/messages.schema/message.schema.js"
     console.log("createdMessage: ",messageCreated);
     return messageCreated;
   }
+
+module.exports = { getAllMessagesDAO, createMessageDAO };

@@ -1,9 +1,13 @@
-import * as md  from "../../data/message.data/message.data.js";
-  export default function getAllMessages() {
-    return md.getAllMessagesDAO();
+// import * as md from "../../data/message.data/message.data.js";
+const { getAllMessagesDAO, createMessageDAO } = require("../../data/message.data/message.data.js");
+  const getAllMessages=function() {
+    return getAllMessagesDAO();
   }
 
-  export function createMessage(message){
-    return md.createMessageDAO(message);
+const createMessage = function(message){
+    return createMessageDAO(message);
   }
+
+module.exports = { getAllMessages, createMessage };
+
 
