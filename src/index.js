@@ -16,10 +16,21 @@ app.use(express.static(publicDirectoryPath))
 
 
 /**
- * check io connection
+ * socket io connectio 
  */
-io.on('connection', () => {
+let count = 0
+
+io.on('connection', (socket) => {
     console.log('New WebSocket connection')
+
+    // creating and sending socket event "countUpdated" to client
+    socket.emit('countUpdated', count)
+    
+    // receiving first then sending socket event to client
+    socket.on('increment', () => {
+        count++
+        io.emit('countUpdated', count)
+    })
 })
 
 server.listen(port, () => {
