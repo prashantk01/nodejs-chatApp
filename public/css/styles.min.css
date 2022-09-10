@@ -9,12 +9,13 @@ html {
 }
 
 input {
-    font-size: 14px
+    font-size: 14px;
+    border: #000000;
 }
 
 body {
-    line-height: 1.4;
-    color: #333;
+    line-height: 2;
+    color: rgb(75, 15, 15);
     font-family: Helvetica, Arial, sans-serif
 }
 
@@ -26,11 +27,11 @@ label {
     display: block;
     font-size: 14px;
     margin-bottom: 8px;
-    color: #777
+    color: rgb(37, 0, 0)
 }
 
 input {
-    border: 1px solid #eee;
+    border: 1px solid rgb(180, 176, 176);
     padding: 12px;
     outline: none
 }
@@ -38,15 +39,16 @@ input {
 button {
     cursor: pointer;
     padding: 12px;
-    background: #7C5CBF;
+    background: #7c0d0d62;
     border: none;
-    color: #fff;
+    color: rgb(255, 255, 255);
     font-size: 16px;
+    text-shadow: true;
     transition: background .3s ease
 }
 
 button:hover {
-    background: #6b47b8
+    background: #9d81da
 }
 
 button:disabled {
@@ -55,7 +57,7 @@ button:disabled {
 }
 
 .centered-form {
-    background: #333744;
+    background: #0003082c;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -65,9 +67,9 @@ button:disabled {
 
 .centered-form__box {
     box-shadow: 0 0 17px 1px #1D1F26;
-    background: #F7F7FA;
-    padding: 24px;
-    width: 250px
+    background: #4d32e05d;
+    padding: 30px;
+    width: 300px
 }
 
 .centered-form button {
@@ -86,7 +88,7 @@ button:disabled {
 .chat__sidebar {
     height: 100vh;
     color: #fff;
-    background: #333744;
+    background: #000000;
     width: 225px;
     overflow-y: scroll
 }
@@ -105,7 +107,7 @@ button:disabled {
 }
 
 .message {
-    margin-bottom: 16px
+    margin-bottom: 18px
 }
 
 .message__name {
@@ -115,7 +117,7 @@ button:disabled {
 }
 
 .message__meta {
-    color: #777;
+    color: rgb(139, 110, 110);
     font-size: 14px
 }
 
@@ -137,7 +139,7 @@ button:disabled {
 }
 
 .compose input {
-    border: 1px solid #eee;
+    border: 1px solid rgb(189, 181, 181);
     width: 100%;
     padding: 12px;
     margin: 0 16px 0 0;
@@ -151,7 +153,7 @@ button:disabled {
 .room-title {
     font-weight: 400;
     font-size: 22px;
-    background: #2c2f3a;
+    background: #330800;
     padding: 24px
 }
 
@@ -164,6 +166,6 @@ button:disabled {
 
 .users {
     list-style-type: none;
-    font-weight: 300;
+    font-weight: 250;
     padding: 12px 24px 0
 }

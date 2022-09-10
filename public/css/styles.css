@@ -39,16 +39,16 @@ input {
 
 button {
     cursor: pointer;
-    padding: 12px;
-    background: #7C5CBF;
+    padding: 20px;
+    background: #353b5c;
     border: none;
-    color: white;
+    color: rgb(253, 253, 253);
     font-size: 16px;
     transition: background .3s ease;
 }
 
 button:hover {
-    background: #6b47b8;
+    background: #4d3879;
 }
 
 button:disabled {
@@ -59,7 +59,7 @@ button:disabled {
 /* Join Page Styles */
 
 .centered-form {
-    background: #333744;
+    background: #4d5879;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -69,9 +69,9 @@ button:disabled {
 
 .centered-form__box {
     box-shadow: 0px 0px 17px 1px #1D1F26;
-    background: #F7F7FA;
+    background: #e5e5e9;
     padding: 24px;
-    width: 250px;
+    width: 300px;
 }
 
 .centered-form button {
